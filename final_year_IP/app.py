@@ -13,7 +13,7 @@ st.set_page_config(
 #logic to load the pickle model
 @st.cache_resource
 def load_model():
-    return pickle.load(open('final_ensemble_model.pkl', 'rb'))
+    return pickle.load(open('final_year_IP/final_ensemble_model.pkl', 'rb'))
 
 
 model = load_model()
@@ -82,7 +82,7 @@ with result_col:
         import matplotlib.pyplot as plt
         import pandas as pd
 
-        gb_model = pickle.load(open('gb_model.pkl', 'rb'))
+        gb_model = pickle.load(open('final_year_IP/gb_model.pkl', 'rb'))
 
         features_names = ['age', 'gender', 'chestpain', 'retingBP', 'serumcholestrol','fastingbloodsugar','restingelecto', 'maxheartrate', 'exerciseangia', 'slope', 'oldpeak', 'noofmajorvessels']
 
